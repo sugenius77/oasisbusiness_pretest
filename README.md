@@ -33,3 +33,6 @@
 - 업데이트된 시간 포맷팅
   - 외부 라이브러리 `@github/time-elements` 사용
 - 필터 결과 표시와 clear 기능 구현
+  - 예시 화면
+    ![image](https://user-images.githubusercontent.com/68172999/183271212-f6c2eb4b-6590-4ed2-99ce-8c756ce213e9.png)
+    ![image](https://user-images.githubusercontent.com/68172999/183271222-77f63fb1-6551-4108-b0c1-a733f84ed2e2.png)
