@@ -37,7 +37,22 @@ function App() {
     if (e.target.value === "full_name") {
       localStorage.setItem("direction", "asc");
       setDirection("asc");
+    } else {
+      localStorage.setItem("direction", "");
+      setDirection("");
     }
+  };
+  const handleFilterClear = () => {
+    localStorage.setItem("lang", "");
+    localStorage.setItem("sort", "");
+    localStorage.setItem("direction", "");
+    setSelectedLang("");
+    setSelectedSort("");
+    setDirection("");
+  };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
   const getData = async () => {
@@ -50,16 +65,7 @@ function App() {
       console.error(error);
     }
   };
-  const handleFilterClear = () => {
-    localStorage.setItem("lang", "");
-    localStorage.setItem("sort", "");
-    setSelectedLang("");
-    setSelectedSort("");
-  };
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
   useEffect(() => {
     getData();
   }, [selectedSort, direction]);
